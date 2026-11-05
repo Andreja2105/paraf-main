@@ -5,7 +5,9 @@ import rs.raf.gui.swing.MainFrame;
 
 public class ApplicationFramework {
 
-    public ApplicationFramework(){
+    private static ApplicationFramework instance;
+
+    private ApplicationFramework(){
 
     }
 
