@@ -7,6 +7,12 @@ public class ApplicationFramework {
 
     private static ApplicationFramework instance;
 
+    public static ApplicationFramework getInstance(){
+        if (instance == null)
+            return instance;
+        return instance;
+    }
+
     private ApplicationFramework(){
 
     }
