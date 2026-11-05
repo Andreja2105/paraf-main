@@ -14,10 +14,10 @@ public class ApplicationFramework {
 
         return instance;
     }
-    private static Folder project;
+    private Folder project;
 
-    private ApplicationFramework(Folder project){
-        this.project = project;
+    private ApplicationFramework(){
+        project = new Folder("Project");
     }
 
     public void initialize() {
@@ -27,4 +27,11 @@ public class ApplicationFramework {
 
     }
 
+    public Folder getProject() {
+        return project;
+    }
+
+    public void setProject(Folder project) {
+        this.project = project;
+    }
 }
