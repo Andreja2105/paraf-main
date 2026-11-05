@@ -3,7 +3,7 @@ package rs.raf.model;
 public class Document extends Node{
     private String text;
 
-    public Document(String name){
+    public Document(String name, String text){
         super(name);
         this.text = text;
     }

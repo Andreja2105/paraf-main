@@ -2,6 +2,7 @@ package rs.raf.core;
 
 
 import rs.raf.gui.swing.MainFrame;
+import rs.raf.model.Folder;
 
 public class ApplicationFramework {
 
@@ -13,9 +14,10 @@ public class ApplicationFramework {
 
         return instance;
     }
+    private static Folder project;
 
-    private ApplicationFramework(){
-
+    private ApplicationFramework(Folder project){
+        this.project = project;
     }
 
     public void initialize() {
