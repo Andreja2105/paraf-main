@@ -7,7 +7,7 @@ public class AppCore {
 
 
     public static void main(String[] args) {
-        ApplicationFramework applicationFramework = new ApplicationFramework();
+        ApplicationFramework applicationFramework = ApplicationFramework.getInstance();
         applicationFramework.initialize();
 
     }

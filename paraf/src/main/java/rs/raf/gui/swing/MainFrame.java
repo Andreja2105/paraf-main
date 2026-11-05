@@ -16,6 +16,7 @@ import java.awt.event.KeyEvent;
 public class MainFrame extends JFrame {
 
     public static final String TITLE = "Paraf";
+    private static MainFrame instace;
 
     private static final String FILE_MENU_TITLE = "File";
     private static final String EXIT_ITEM_TITLE = "Exit";
@@ -24,7 +25,13 @@ public class MainFrame extends JFrame {
 
     private final JTextArea textArea;
 
-    public MainFrame() {
+    public static MainFrame getInstance(){
+        if (instace == null)
+            instace = new MainFrame();
+        return instace;
+    }
+
+    private MainFrame() {
         setTitle(TITLE);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         setSize(screenSize.width / 2, screenSize.height / 2);

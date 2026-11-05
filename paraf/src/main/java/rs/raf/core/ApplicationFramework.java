@@ -9,7 +9,8 @@ public class ApplicationFramework {
 
     public static ApplicationFramework getInstance(){
         if (instance == null)
-            return instance;
+            instance = new ApplicationFramework();
+
         return instance;
     }
 
@@ -18,7 +19,7 @@ public class ApplicationFramework {
     }
 
     public void initialize() {
-        MainFrame mainFrame = new MainFrame();
+        MainFrame mainFrame = MainFrame.getInstance();
 
         mainFrame.setVisible(true);
 
